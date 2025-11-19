@@ -40,6 +40,7 @@ class Product(Base):
     price = Column(DECIMAL(8, 2))
     category_id = Column(Integer, ForeignKey("categories.id"))
     category = relationship("Category", back_populates="products")
+    vk_attachment = Column(String, default=None)  # хранит photo_id
 
 
 class UserSession(Base):
