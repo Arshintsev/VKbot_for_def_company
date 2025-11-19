@@ -1,0 +1,22 @@
+[project]
+name = "def"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Andrey Arshintsev",email = "arshintsev@mail.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "vk-api (>=11.10.0,<12.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=25.11.0,<26.0.0)"
+]
