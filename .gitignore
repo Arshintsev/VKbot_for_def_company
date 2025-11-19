@@ -1,0 +1,55 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+*.egg
+*.log
+
+# --- Virtual env ---
+venv/
+env/
+.venv/
+ENV/
+.env
+
+# --- Poetry ---
+poetry.lock
+# Если хочешь — можно убрать из игнора (многие добавляют lock-файл)
+# Но если проект учебный — обычно игнорируют.
+
+# --- IDE ---
+.idea/
+.vscode/
+
+# --- ОС ---
+.DS_Store
+Thumbs.db
+
+# --- Токены и конфиги ---
+*.env
+.env.*
+config.ini
+secret.json
+token.txt
+
+# --- Docker ---
+*.pid
+*.seed
+*.pid.lock
+
+# --- Byte-compiled ---
+*.pyd
+*.dll
+
+# --- Tests ---
+.coverage
+.pytest_cache/
+
+# --- Cache ---
+.cache/
+dist/
+build/
