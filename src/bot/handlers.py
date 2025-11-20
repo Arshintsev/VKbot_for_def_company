@@ -66,7 +66,7 @@ def handle_message(vk, user_id: int, text: str):
             send_message(
                 vk,
                 user_id,
-                "Выберите категорию:",
+                "Приветствуем в магазине выпечки, у нас всегда все самое свежее!\n\nВыберите категорию:",
                 keyboard=main_menu_keyboard(categories),
             )
             # меняем state на CATEGORY_SELECTED сразу после показа категорий
