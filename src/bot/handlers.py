@@ -1,10 +1,12 @@
 import random
+from typing import List, Optional
+
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
+
+from src.bot.keyboards import main_menu_keyboard
+from src.bot.states import UserBot
 from src.db.database import SessionLocal
 from src.db.models import Category, Product
-from src.bot.states import UserBot
-from src.bot.keyboards import main_menu_keyboard
-from typing import List, Optional
 
 
 def _normalize_text(value: Optional[str]) -> str:
@@ -66,7 +68,8 @@ def handle_message(vk, user_id: int, text: str):
             send_message(
                 vk,
                 user_id,
-                "Приветствуем в магазине выпечки, у нас всегда все самое свежее!\n\nВыберите категорию:",
+                "Приветствуем в магазине выпечки,"
+                " у нас всегда все самое свежее!\n\nВыберите категорию:",
                 keyboard=main_menu_keyboard(categories),
             )
             # меняем state на CATEGORY_SELECTED сразу после показа категорий
@@ -161,7 +164,8 @@ def handle_message(vk, user_id: int, text: str):
                 send_message(
                     vk,
                     user_id,
-                    f"Название: {product.name}\nОписание: {product.description}\nЦена: {product.price} руб.",
+                    f"Название: {product.name}\nОписание: {product.description}\n"
+                    f"Цена: {product.price} руб.",
                     attachment=product.vk_attachment,
                 )
 
@@ -206,7 +210,8 @@ def handle_message(vk, user_id: int, text: str):
                 send_message(
                     vk,
                     user_id,
-                    f"{product.name}\n{product.description}\nЦена: {product.price} руб.",
+                    f"{product.name}\n{product.description}\n"
+                    f"Цена: {product.price} руб.",
                     attachment=product.vk_attachment,
                 )
                 return

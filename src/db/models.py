@@ -1,17 +1,16 @@
 import json
 
 from sqlalchemy import (
+    DECIMAL,
     Column,
+    DateTime,
+    ForeignKey,
     Integer,
     String,
-    ForeignKey,
-    DECIMAL,
     Text,
-    DateTime,
     func,
 )
 from sqlalchemy.orm import declarative_base, relationship
-
 
 Base = declarative_base()
 

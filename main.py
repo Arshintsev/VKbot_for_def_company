@@ -1,7 +1,9 @@
 import os
-from dotenv import load_dotenv
+
 import vk_api
-from vk_api.longpoll import VkLongPoll, VkEventType
+from dotenv import load_dotenv
+from vk_api.longpoll import VkEventType, VkLongPoll
+
 from src.bot.handlers import handle_message
 from src.db.seed import init_db
 

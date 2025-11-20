@@ -1,5 +1,5 @@
 import os
-import random
+
 import vk_api
 from vk_api.upload import VkUpload
 
@@ -26,7 +26,6 @@ def init_db(vk_token: str):
 
     # VK загрузчик
     vk_session = vk_api.VkApi(token=vk_token)
-    vk = vk_session.get_api()
     upload = VkUpload(vk_session)
 
     # Проверяем, пустая ли база

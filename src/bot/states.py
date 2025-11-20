@@ -1,6 +1,7 @@
 from transitions import Machine
-from src.db.models import UserSession
+
 from src.db.database import SessionLocal
+from src.db.models import UserSession
 
 
 class UserBot:
