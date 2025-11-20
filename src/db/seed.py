@@ -47,7 +47,7 @@ def init_db(vk_token: str):
 
     # Список товаров
     products_data = [
-        ("Батон", "Хрустящий батон", "Bread-bread.jpg", 150.0, categories[0].id),
+        ("Батон", "Хрустящий батон", "Bread-fresh-bread.jpg", 150.0, categories[0].id),
         ("Багет", "Свежий багет", "Bread-baguette.jpg", 120.0, categories[0].id),
         ("Булочка", "Свежая булочка", "Bread-buns.jpg", 80.0, categories[0].id),
         (

@@ -23,5 +23,6 @@ build-backend = "poetry.core.masonry.api"
 dev = [
     "black (>=25.11.0,<26.0.0)",
     "ruff (>=0.14.5,<0.15.0)",
-    "pytest (>=9.0.1,<10.0.0)"
+    "pytest (>=9.0.1,<10.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)"
 ]
