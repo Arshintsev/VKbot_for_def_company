@@ -1,0 +1,10 @@
+services:
+  vk-bot:
+    build: .
+    env_file:
+      - .env
+    command: python -m src.bot.main
+    volumes:
+      - ./src/bot/vk_bot.db:/app/src/bot/vk_bot.db
+    restart: unless-stopped
+
